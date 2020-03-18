@@ -306,7 +306,7 @@ return Transformer({
     end
     return node
   end,
-  continue = function(self, node)
+  ["continue"] = function(self, node)
     local continue_name = self:send("continue")
     if not (continue_name) then
       error("continue must be inside of a loop")
